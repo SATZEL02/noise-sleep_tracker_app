@@ -7,11 +7,14 @@ const recordSchema = new mongoose.Schema({
         required:true
     },
     hours:{
-        type:Number,
+        type:Number,        
         required:true,
-        default:0
+        default:0           /*change default value if need be*/
     }
-}, {timestamps: true});
+}, {
+    timestamps: true,       /*set to true as timestamps are necessary for record retrievals*/
+    versionKey: false       /*set to true if want to createe version key in the record*/  
+});
 
 const Record = mongoose.model('Record',recordSchema);
 

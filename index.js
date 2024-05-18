@@ -19,19 +19,17 @@ mongoose
             console.error("Error connecting to MongoDB: " + err);
         }
         );
+
+
 //Define app and handle json data parsing
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-//For development Purposes, Uncomment next comment
+//Port set to 3000 for development purpose and local hosting
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000!');
 });
-
-
-//For Production purposes, Uncomment next comment
-
 
 
 //Handle default Route for production purpose
