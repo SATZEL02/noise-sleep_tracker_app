@@ -1,11 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
 import cors  from 'cors';
-import recordRouter from "./routes/record.route.js";
+import dotenv from 'dotenv';
 dotenv.config();
 
 
+//Import Router from routes folder
+import recordRouter from "./routes/record.route.js";
+
+
+
+//Connect server to MonogDb Cloud
 mongoose
     .connect(process.env.MONGODB_URL).then(() => {
         console.log("Connected to MongoDB!");
@@ -14,22 +19,32 @@ mongoose
             console.error("Error connecting to MongoDB: " + err);
         }
         );
-
+//Define app and handle json data parsing
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-
+//For development Purposes, Uncomment next comment
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000!');
 });
 
+
+//For Production purposes, Uncomment next comment
+
+
+
+//Handle default Route for production purpose
 app.get('/',(req,res)=>{
     res.json({"message":"API Connected", "isValid":true});
 });
 
+//Route all record related queries to record Router
 app.use('/record',recordRouter);
 
+
+
+//Middleware and ErrorHandler
 app.use((err,req,res,next) => {
     const statusCode = err.statusCode || 500;
     const message = err.message || 'Internal Server Error';
