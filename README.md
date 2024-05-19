@@ -37,3 +37,26 @@ Returns statusCode of 200 in case of successful deletion or 40* in case of failu
 
 ## For Developers and Contributors
 
+### Project Setup
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/SATZEL02/noise-sleep_tracker_app.git
+    cd noise-sleep_tracker_app
+
+2. **Install the dependencies:**
+ 
+   ```bash
+   npm install
+
+3. **Start the server:**
+  
+   ```bash
+   nodemon index.js
+
+
+## To Do
+
+* Add user validation feature in case any authorized person accesses database
+* Add feature to give average weekly sleep duration and so on 

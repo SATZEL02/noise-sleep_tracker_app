@@ -27,7 +27,10 @@ export default function(database){
     //Route all record related queries to record Router
     app.use('/record',exposeDatabase,recordRouter);
     
-    
+    //Handle all the undefined url's or endpoints
+    app.use(function(req,res){
+        res.status(404).send("Error 404: Page Not Found!");
+    });
     //Middleware and ErrorHandler
     app.use((err,req,res,next) => {
         const statusCode = err.statusCode || 500;

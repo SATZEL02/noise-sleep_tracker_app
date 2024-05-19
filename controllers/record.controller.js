@@ -33,10 +33,6 @@ export const getRecords = async(req,res,next) =>{
     //Ascending order can also be followed
     const orderBy = req.body.order || "desc";
 
-    if(!req.params.userId){
-        return next(errorHandler(400,"Insufficient Information"));
-    }
-
     const records = await database.getRecordsFromUserId(req.params.userId,sortBy,orderBy);
 
     //If no record is found it will return a empty object, so frontend needs to check record length for proper UI implementation
