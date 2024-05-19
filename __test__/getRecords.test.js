@@ -20,6 +20,7 @@ describe("Get /record/getRecords/:userId",()=>{
         const response = await request(app).get("/record/getRecord/test");
         expect(getRecordsFromUserId.mock.calls.length).toBeLessThanOrEqual(1)
         expect(response.status).toBe(200);
+        expect(response.headers['content-type']).toEqual(expect.stringContaining("json"));
     });
 
     //Should return a status Code of 404 for mismatched API endpoint

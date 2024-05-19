@@ -59,4 +59,4 @@ Returns statusCode of 200 in case of successful deletion or 40* in case of failu
 ## To Do
 
 * Add user validation feature in case any authorized person accesses database
-* Add feature to give average weekly sleep duration and so on 
+* Add feature to give average weekly sleep duration
