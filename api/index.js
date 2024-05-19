@@ -1,5 +1,5 @@
-import makeApp from './app.js';
-import * as database from "./utils/database.js";
+import makeApp from '../app.js';
+import * as database from "../utils/database.js";
 
 const app = makeApp(database);
 
@@ -8,3 +8,5 @@ const app = makeApp(database);
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000!');
 });
+
+export default app;
