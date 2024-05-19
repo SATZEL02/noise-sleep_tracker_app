@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+//Schema of a entry in Record cluster of Database
 //UserId is of type String and Hours is of type number, timestamps are assigned by database which makes easier to keep track of records
 const recordSchema = new mongoose.Schema({
     userId:{
