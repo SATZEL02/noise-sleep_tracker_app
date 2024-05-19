@@ -2,12 +2,20 @@
 
 ## A basic RESTful API using NodeJs and Express allowing users to store and retrieve user sleep data.
 
+## LIVE:
+
+   ```bash
+   https://noise-sleep-tracker-app.onrender.com/
+   ```
+   The API is deployed on render, which makes instances spin down with inactivity, so if you are using the live api, you may have to wait a minute or so before API responds for first time
+
 ## Technologies Used
 
 - **Express.js:** A web application framework for building APIs and handling server-side logic.
 - **Node.js:** A runtime environment for executing JavaScript code on the server.
 - **MongoDB:** A cross-platform, document-oriented database program
 - **Jest:** A testing framework designed to ensure correctness of any JavaScript codebase
+- **Render:** A unified cloud to build and run all your apps and websites
 
 ## Features
 
@@ -54,8 +62,13 @@ Returns statusCode of 200 in case of successful deletion or 40* in case of failu
 3. **Start the server:**
   
    ```bash
-   nodemon index.js
+   node index.js
 
+
+## Testing
+
+   Implemented Unit Testing through JEST and SUPERTEST
+   If you want to add more test, create new file under _\_test__ folder with name *.test.js and write your test there
 
 ## To Do
 
