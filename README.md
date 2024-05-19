@@ -1,6 +1,6 @@
 # NOISE - SLEEP TRACKER APP
 
-##A basic RESTful API using NodeJs and Express allowing users to store and retrieve user sleep data.
+## A basic RESTful API using NodeJs and Express allowing users to store and retrieve user sleep data.
 
 ## Technologies Used
 
@@ -27,6 +27,7 @@ Incase submission fails, error message is diplayed along with exit status code
 ```
 Requires only userId as a query parameter and will return all the records for a given userId
 Returns a empty object in case no record for a given user is found
+Can specify sort by and order by through request body to get data in that format
 
 ```bash
 3. /record/deleteRecord/:recordId
