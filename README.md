@@ -58,8 +58,14 @@ Returns statusCode of 200 in case of successful deletion or 40* in case of failu
  
    ```bash
    npm install
+   
+3. **Environment Variables:**
 
-3. **Start the server:**
+   Only requires url to MongoDB database for connection, name it as:
+   ```bash
+   MONGODB_URL
+
+4. **Start the server:**
   
    ```bash
    node index.js
