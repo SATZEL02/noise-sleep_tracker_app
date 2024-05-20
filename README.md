@@ -43,7 +43,7 @@ Requires only userId as a query parameter<br>
 In case of successfull retrieval:
 - Returns status code 200
 - Returns array of record objects which include record ID, user ID, hours, createdAt and updatedAt<br><br>
-In case of empty array:
+In case of no record found:
 - Returns status code 200
 - Returns empty array<br><br>
 In case of error:
