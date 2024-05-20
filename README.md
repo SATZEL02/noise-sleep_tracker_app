@@ -28,19 +28,27 @@ The main purpose of this API is to help its user keep track of their sleep data
 ```
 Requires userId and number of hours in json format to be sent along to store in mongoDB database<br>
 <br>Incase of successfull creation, it returns:
-- Status code of 201
+- Status code of 200
 - Message of record successfully created
 - Record ID
 <br><br>Incase submission fails, it returns:
 - error message
-- exit status code of 40*
+- exit status code of 400
 - Success: false
 
 ```bash
 2. /record/getRecord/:userId
 ```
-Requires only userId as a query parameter and will return all the records for a given userId
-Returns a empty object in case no record for a given user is found
+Requires only userId as a query parameter
+In case of successfull retrieval:
+- Returns status code 200
+- Returns array of record objects which include record ID, user ID, hours, createdAt and updatedAt
+In case of empty array:
+- Returns status code 200
+- Returns empty array
+In case of error:
+- Returns error message
+- Returns error code as status code
 Can specify sort by and order by through request body to get data in that format
 
 ```bash
