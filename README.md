@@ -54,9 +54,18 @@ Can specify sort method and order method through request body to get data in tha
 ```bash
 3. /record/deleteRecord/:recordId
 ```
-Requires only record Id as a query parameter and will delete the specified query from the database
-Returns a error message if no such record is found
-Returns statusCode of 200 in case of successful deletion or 40* in case of failure
+Requires only record Id as a query parameter and will delete the specified query from the database<br>
+In case of successfull deletion:
+- Returns status code 200
+- Returns message: record deleted sucessfully
+
+In case no record with record id is found:
+- Returns status code 401
+- returns message: no suck record found
+
+In case of error:
+- Returns error code as status code
+- Return error message
 
 ## For Developers and Contributors
 
