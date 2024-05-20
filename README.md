@@ -65,7 +65,7 @@ In case of successfull deletion:
 
 In case no record with record id is found:
 - Returns status code 401
-- returns message: no suck record found
+- returns message: no such record found
 
 In case of error:
 - Returns error code as status code
