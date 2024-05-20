@@ -30,8 +30,7 @@ Requires userId and number of hours in json format to be sent along to store in 
 <br>Incase of successfull creation, it returns:
 - Status code of 201
 - Message of record successfully created
-- Record ID
-<br>Incase submission fails, it returns:
+- Record ID<br><br>Incase submission fails, it returns:
 - error message
 - exit status code of 40*
 - Success: false
