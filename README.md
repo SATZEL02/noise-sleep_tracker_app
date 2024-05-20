@@ -27,7 +27,10 @@ The main purpose of this API is to help its user keep track of their sleep data
 1. /record/sleep
 ```
 Requires userId and number of hours in json format to be sent along to store in mongoDB database
-Returns the record Id of the new record.
+Incase of successfull creation, it returns:
+- Status code of 201
+- Message of record successfully created
+- Record ID
 Incase submission fails, error message is diplayed along with exit status code
 
 ```bash
