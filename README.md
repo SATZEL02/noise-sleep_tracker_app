@@ -30,8 +30,11 @@ Requires userId and number of hours in json format to be sent along to store in 
 Incase of successfull creation, it returns:
 - Status code of 201
 - Message of record successfully created
-- Record ID
-Incase submission fails, error message is diplayed along with exit status code
+- Record ID <br>
+Incase submission fails, it returns:
+- error message
+- exit status code of 40*
+- Success: false
 
 ```bash
 2. /record/getRecord/:userId
