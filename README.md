@@ -42,13 +42,13 @@ Requires userId and number of hours in json format to be sent along to store in 
 Requires only userId as a query parameter
 In case of successfull retrieval:
 - Returns status code 200
-- Returns array of record objects which include record ID, user ID, hours, createdAt and updatedAt
+- Returns array of record objects which include record ID, user ID, hours, createdAt and updatedAt<br>
 In case of empty array:
 - Returns status code 200
-- Returns empty array
+- Returns empty array<br>
 In case of error:
 - Returns error message
-- Returns error code as status code
+- Returns error code as status code<br>
 Can specify sort by and order by through request body to get data in that format
 
 ```bash
