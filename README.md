@@ -39,7 +39,7 @@ Requires userId and number of hours in json format to be sent along to store in 
 ```bash
 2. /record/getRecord/:userId
 ```
-Requires only userId as a query parameter
+Requires only userId as a query parameter<br>
 In case of successfull retrieval:
 - Returns status code 200
 - Returns array of record objects which include record ID, user ID, hours, createdAt and updatedAt<br>
@@ -49,7 +49,7 @@ In case of empty array:
 In case of error:
 - Returns error message
 - Returns error code as status code<br>
-Can specify sort by and order by through request body to get data in that format
+Can specify sort method and order method through request body to get data in that format
 
 ```bash
 3. /record/deleteRecord/:recordId
